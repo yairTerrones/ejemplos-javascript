@@ -1,0 +1,21 @@
+h1 {
+    color:darkblue;
+}
+
+body {
+    background-color:mediumseagreen;
+}
+
+#estiloIndices{
+    background-color: red;
+}
+
+#estiloInterior{
+    background-color:cornflowerblue;
+}
+
+table{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: solid;
+}

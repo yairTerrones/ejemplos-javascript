@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola JavaScript</title>
+</head>
+<body>
+    <script>
+    window.document.write('<h1 style="color:blue;"> Tabla de Pitágoras en JavaScript. </h1>');
+    // window.aler("Hola JavaScript");
+    // var nmbre = window.prompt("Cual es tu nombre?");
+    // window.confirm("Hola " + "Quieres aprender mas? JavaScript");
+    
+    window.console.log('Hola consola');
+
+    var lenguajes = ['HTML','CSS','JavaScript','PHP']
+    imprimir(lenguajes)
+
+    function imprimir(tabla){
+        document.write('<table>')
+        for (var i=0;i<lenguajes.length;i++){
+            document.write('<tr>')
+            document.write('<td style="border:solid;">')
+            document.write(lenguajes[i]);
+            document.write('</td>')
+            document.write('</tr>')
+        }
+    document.write('</table>')
+    }
+    //hacer un script de las tablas de multiplicar 
+    //hacer arreglo de arreglos
+    //serian dos funciones.-
+    </script>
+</body>
+</html>
+
+

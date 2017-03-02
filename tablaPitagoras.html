@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Pitágoras en JavaScript.</title>
+    <link rel="stylesheet" type="text/css" href="estiloTablaPitagoras.css">
+</head>
+<body>
+    <script>
+    document.write('<h1>Tabla de Pitágoras en JavaScript.</h1>')
+    var tamTabla = window.prompt("Dame el tamaño de la tabla")
+    var arrContenedor = new Array()
+
+    creaTabla(tamTabla)
+    function creaTabla(unTam){
+
+        //Creamos el arreglo que va en la parte de arriba y la parte izquierda..
+        var arrArriba = []
+        var ladoIzq = []
+        for(var iter = 0; iter < unTam; iter++){
+            if(iter != 0){
+                arrArriba.push((iter + 1))
+                ladoIzq.push((iter + 1))
+            }  
+            else{
+                arrArriba.push('X')
+                arrArriba.push((iter + 1))
+                ladoIzq.push((iter + 1))
+            }   
+        }
+        arrContenedor.push(arrArriba)
+
+        //Creamos los renglones y los numero de la parte izquierda.
+        for(var i = 0; i < unTam; i++){
+            var arrRenglo = []
+            arrRenglo.push(ladoIzq[i])
+            for(var j = 0; j < unTam; j++){
+                arrRenglo.push(((i+1)*(j+1))) 
+            }
+            arrContenedor.push(arrRenglo)
+        }
+    }
+
+    //Imprimimos la tabla.
+    imprime(arrContenedor)
+    function imprime(unaTablaPitagoras){
+        document.write('<table>')
+        for (var i = 0; i < arrContenedor.length; i++){
+            document.write('<tr>')
+           for(var j = 0; j < arrContenedor[i].length; j++){
+               if(i==0){
+                    document.write('<th id="estiloIndices" >')
+                    document.write(arrContenedor[i][j])
+                    document.write('</th>')
+               }else{
+                   if(j == 0){
+                       document.write('<th id="estiloIndices" >')
+                        document.write(arrContenedor[i][j])
+                        document.write('</th>')
+                   }else{
+                        document.write('<th id="estiloInterior">')
+                        document.write(arrContenedor[i][j])
+                        document.write('</th>')
+                   }
+                    
+               }
+           }
+           document.write('</tr>')
+        }
+    document.write('</table>')
+    }
+    </script>
+    
+</body>
+</html>

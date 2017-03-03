@@ -1,17 +1,28 @@
 
-function agregaApantalla(unaTecla){
-    //Paso 1: Crear el nuevo elemento ( createElement() )
-    var elementoNuevo = document.createElement('p')
-    //paso 2: Crear el contenido( createTextNode() )
-    var nodoContenido = document.createTextNode(unaTecla)
-    //Paso 3: Añadir el contenido al documento ( appendChild() )
-    elementoNuevo.appendChild(nodoContenido)
-    //Paso 4: Agregar atributos al elemento ( setAttribute() )
-    elementoNuevo.setAttribute('class')
-    //Paso 5: Agregar el elemento a documento ( appendChild() )
-    var contenedor = document.getElementById('contenedor')
-    contenedor.appendChild(elementoNuevo)//aqui obtenemos la section
+var btnPress = ""
+var anterior =""
+
+function agregaApantalla(){
+    var contenedor = document.getElementById('textoEnPantalla')
+    contenedor.textContent = btnPress + anterior
+    anterior = contenedor.textContent
 }
 
-var nueve = document.getElementById('nueve')
-btnSaluda.onclick = agregaApantalla('nueve')
+//Nueve
+btnPress ='9'
+var btnNueve = document.getElementById('nueve')
+btnNueve.onclick = function () {
+    agregaApantalla()
+}
+//Ocho
+btnPress ='8'
+var btnOcho = document.getElementById('ocho')
+btnOcho.addEventListener('click',agregaApantalla)
+//Siete
+btnPress ='7'
+var btnSiete = document.getElementById('siete')
+btnSiete.addEventListener('click',agregaApantalla)
+//Mas
+btnPress ='+'
+var btnMas = document.getElementById('mas')
+btnSiete.addEventListener('click',agregaApantalla)

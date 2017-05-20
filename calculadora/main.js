@@ -1,9 +1,17 @@
+var contenido;
 
 function agregaApantalla(unBoton){
     console.log(unBoton)
     var contenedor = document.getElementById('textoEnPantalla');
     contenedor.textContent = contenedor.textContent + unBoton
 }
+
+//Igual
+BtnIgual = document.getElementById('igual');
+BtnIgual.addEventListener('click', function(){ 
+    //Interaccion con php.
+    contenido = document.getElementById('textoEnPantalla');
+});
 
 //Nueve
 BtnNueve = document.getElementById('nueve');
@@ -93,12 +101,6 @@ BtnParAbre.addEventListener('click', function(){
 BtnParCierr = document.getElementById('parCierr');
 BtnParCierr.addEventListener('click', function(){ 
     agregaApantalla(')');
-});
-
-//Igual
-BtnIgual = document.getElementById('igual');
-BtnIgual.addEventListener('click', function(){ 
-    agregaApantalla('=');
 });
 
 //Slash

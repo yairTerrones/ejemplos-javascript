@@ -2,22 +2,48 @@ body {
     background-color: darkslategray;
 }
 
-#contenedor {
-    width: 400px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;   
+.contenedorCalculadora {
+    width: 500px;
+    height: 640px;
+    margin: auto;
+    background-color: grey;
 }
 
-.caja {
-    padding: 20px;
+.contenedorCalculadora h1 {
+    text-align: center;
     margin: 10px;
-    background: lightskyblue;
-    border: solid 0.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.contenedorCalculadora p{
+    text-align: center;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    color: white;
+}
+
+.cajaPantalla {
+    width: 470px;
+    height: 60px;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+    background-color: darkgray;
+}
+
+.cajaTeclado {
+    width: 470px;
+    height: 495px;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+    background-color: lightblue;
 }
 
 button {
-    background-color: red;
+    width: 113px;
+    height: 95px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
-    padding:30px;
+    font-size: 250%;
+    background-color: red;
 }

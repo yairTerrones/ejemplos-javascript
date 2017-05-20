@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="estiloCalculadora.css">
 </head>
 <body>
-    <h1>Ejercicio integrador.</h1>
-    <section id="contenedor">
-        <div class="caja" id="pantalla">  
+    <div class="contenedorCalculadora">  
+        <h1>Calculadora</h1> 
+        <!--Pantalla-->
+        <div class="cajaPantalla" id="pantalla">  
              <p id="textoEnPantalla"> </p>
         </div>
-
-        <div class="caja" id="teclado">
+        <!--Teclado-->
+        <div class="cajaTeclado">
             <table>
                 <tr>
                     <td><button id="siete">7</button></td>
@@ -20,7 +21,7 @@
                     <td><button id="nueve">9</button></td>
                     <td><button id="mas">+</button></td>
                 </tr>
-                 <tr>
+                                 <tr>
                     <td><button id="cuatro">4</button></td>
                     <td><button id="cinco">5</button></td>
                     <td><button id="seis">6</button></td>
@@ -34,16 +35,54 @@
                 </tr>
                 <tr>
                     <td><button id="cero">0</button></td>
-                    <td><button id="igual">=</button></td>
+                    <td><button id="parCierr">)</button></td>
                     <td><button id="slash">/</button></td>
                     <td><button id="parAbr">(</button></td>
                 </tr>
                 <tr>
-                    <td><button id="parCierr">)</button></td>
+                    <td><button id="igual">=</button></td>
                 </tr>
-            </table>         
+            </table>
         </div>
-    </section>
+    </div>
+<!-- JavaSscript -->
    <script src="main.js"></script>
 </body>
 </html>
+
+<!-- 
+    <?php
+    #El protocolo HTTP utiliza arreglos asiciativos para trasferir 
+    #informacion DESDE el cliente HACIA el servidor.
+
+    #El arreglo asociaativo $_POST contiene los datos que envia el cliente
+    #hacia el servidor empaquetados como parte del portocolo.
+    #ya no aparece la informacion en el URL.
+
+
+    //var_dump($_GET);
+
+    #sumar dos numero sy regresar el resultado de la suma.
+
+    if($_POST){#si recibe algun valor.
+        $numero1 = $_POST['num1'];
+        $numero2 = $_POST['num2'];
+        $suma = $numero1 + $numero2;
+
+        echo '<h1> La suma es: '.$suma.'</h1>'; 
+    }
+?>
+
+ Para no escribir en la url 
+<form method="POST">
+    Escribe el numero 1
+    <input type="text" name="num1">
+    <br>
+    Escribe el numero 2
+    <input type="text" name="num2">
+    <br>
+    <!-- Para enviar los datos ala url
+    <input type="submit" value="Enviar...">
+
+</form>
+-->
